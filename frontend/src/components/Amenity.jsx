@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./FacilityBooking.css"; // Import the CSS file
+import "./Amenity.css"; // Import the CSS file
 
-const FacilityBooking = () => {
+const Amenity = () => {
   const [bookings, setBookings] = useState([]);
 
   return (
@@ -75,4 +75,4 @@ const FacilityBooking = () => {
   );
 };
 
-export default FacilityBooking;
+export default Amenity;

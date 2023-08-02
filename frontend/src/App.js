@@ -1,10 +1,10 @@
 import "./App.css";
-import FacilityBooking from "./components/FacilityBooking";
+import FacilityBooking from "./components/Amenity";
 
 function App() {
   return (
     <div>
-      <FacilityBooking />
+      <Amenity />
     </div>
   );
 }
