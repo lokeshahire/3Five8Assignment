@@ -106,6 +106,7 @@ const Amenity = () => {
       <form onSubmit={handleFormSubmit}>
         <label>
           Facility:
+          <br />
           <select
             name="facility"
             value={formData.facility}
@@ -122,6 +123,7 @@ const Amenity = () => {
         <br />
         <label>
           Date:
+          <br />
           <input
             type="date"
             name="date"
