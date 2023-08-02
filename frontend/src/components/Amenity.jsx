@@ -85,6 +85,11 @@ const Amenity = () => {
     endTime: "",
   });
 
+  const [bookingResult, setBookingResult] = useState(null);
+
+  const handleInputChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
   return (
     <div className="container">
       <form onSubmit={handleFormSubmit}>
