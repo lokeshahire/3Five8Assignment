@@ -90,6 +90,17 @@ const Amenity = () => {
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const result = bookFacility(
+      formData.facility,
+      formData.date,
+      formData.startTime,
+      formData.endTime
+    );
+    setBookingResult(result);
+  };
   return (
     <div className="container">
       <form onSubmit={handleFormSubmit}>
