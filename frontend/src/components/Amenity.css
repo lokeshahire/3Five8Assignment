@@ -38,3 +38,15 @@ button {
   transition: background-color 0.2s ease;
   width: 100%;
 }
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.booking-result {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
