@@ -50,3 +50,22 @@ button:hover {
   padding: 10px;
   border-radius: 5px;
 }
+.booking-success {
+  color: green;
+}
+
+.booking-failed {
+  color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: -5px;
+}
