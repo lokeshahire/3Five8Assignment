@@ -1,5 +1,5 @@
 import "./App.css";
-import FacilityBooking from "./components/Amenity";
+import Amenity from "./components/Amenity";
 
 function App() {
   return (
