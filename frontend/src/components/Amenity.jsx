@@ -78,6 +78,13 @@ const Amenity = () => {
     return { status: "Booked", amount: bookingAmount };
   };
 
+  const [formData, setFormData] = useState({
+    facility: "",
+    date: "",
+    startTime: "",
+    endTime: "",
+  });
+
   return (
     <div className="container">
       <form onSubmit={handleFormSubmit}>
