@@ -74,6 +74,12 @@ const Amenity = () => {
         facilityConfig.rate; // hour based rate
     }
 
+    // Calculate the absolute value of the booking amount to avoid negative values
+    bookingAmount = Math.abs(bookingAmount);
+
+    // Apply toFixed(2) to limit the decimal places to two
+    bookingAmount = bookingAmount.toFixed(2);
+
     setBookings([...bookings, { facility, date, startTime, endTime }]); // add booking
     return { status: "Booked", amount: bookingAmount };
   };
@@ -93,6 +99,17 @@ const Amenity = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    const startDateTime = new Date(`1970-01-01T${formData.startTime}Z`);
+    const endDateTime = new Date(`1970-01-01T${formData.endTime}Z`);
+    if (endDateTime < startDateTime) {
+      setBookingResult({
+        status: "Booking Failed",
+        message:
+          "Time format is incorrect. End time should be after start time.",
+      });
+      return;
+    }
+
     const result = bookFacility(
       formData.facility,
       formData.date,
@@ -101,6 +118,7 @@ const Amenity = () => {
     );
     setBookingResult(result);
   };
+
   return (
     <div className="container">
       <form onSubmit={handleFormSubmit}>
